@@ -129,8 +129,7 @@ body {
 
     .form_view {
         width: 100%;
-    -webkit-appearance: none;
-    -moz-appearance: none;
+    appearance: none;
     border: none;
     background-color: transparent;
     height: 52px;
@@ -141,8 +140,7 @@ body {
 
     #wakancy_select {
         width: 100%;
-        -webkit-appearance: none;
-        -moz-appearance: none;
+        appearance: none;
         border: none;
         background-color: transparent;
         height: 52px;
@@ -556,9 +554,7 @@ body {
     font-weight: 700;
     line-height: 14.52px;
 
-    -webkit-transition: height  0.5s linear;
-    -moz-transition: height  0.5s linear;
-    -o-transition: height  0.5s linear;
+    transition: height  0.5s linear;
 
     padding-top: 10px;
     overflow: hidden;
@@ -694,7 +690,7 @@ body {
 }
 
 .main_item {
-    width: 45.8vw;
+    width: 45.8vw !important;
     height: 50.5vw !important;
     display: flex !important;
     align-items: center;
