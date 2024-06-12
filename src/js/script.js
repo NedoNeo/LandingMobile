@@ -1,4 +1,8 @@
 import "../css/style.css"
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import $ from 'jquery';
+import 'slick-carousel';
 
 let buttons = document.querySelectorAll('.button_to_form');
 let form = document.querySelector(".form")
@@ -53,6 +57,16 @@ let careerObject ={
     item.style.width = sectionWidth.clientWidth + "px";
   })
 
+
+  $(document).ready(function(){
+    $('.slider').slick({
+        autoplay: false, // Автоматическое прокручивание слайдов
+        dots: true ,
+        arrows:true,
+        centerMode: true,
+        variableWidth: true,
+    });
+});
 
  $(document).ready(function(){
   $('.career_slider').slick({
