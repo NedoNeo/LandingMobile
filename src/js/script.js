@@ -1,8 +1,9 @@
-import "../css/style.css"
+import $ from 'jquery';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import $ from 'jquery';
 import 'slick-carousel';
+import '../css/style.css';
+
 
 let buttons = document.querySelectorAll('.button_to_form');
 let form = document.querySelector(".form")
@@ -53,9 +54,16 @@ let careerObject ={
 }
 
 
-  document.querySelectorAll(".career_item").forEach(item => {
-    item.style.width = sectionWidth.clientWidth + "px";
-  })
+
+  // $(document).ready(() => {
+  //   document.querySelectorAll(".career_item").forEach(item => {
+  //     console.log(item)
+  //     console.log(sectionWidth.clientWidth)
+  //     console.log(item.width)
+  //     item.style.width = sectionWidth.clientWidth + "px";
+  //   })
+  // })
+  
 
 
   $(document).ready(function(){
@@ -68,16 +76,29 @@ let careerObject ={
     });
 });
 
- $(document).ready(function(){
-  $('.career_slider').slick({
-      autoplay: false, // Автоматическое прокручивание слайдов
-      dots: false ,
-      arrows:true,
-      variableWidth: true,
-      slidesToShow: 1, // Количество отображаемых слайдов за раз
-        slidesToScroll: 1,
-      adaptiveHeight: true,
-  });
+  $(document).ready(function(){
+    $('.career_slider').slick({
+        autoplay: false, // Автоматическое прокручивание слайдов
+        dots: false ,
+        arrows:true,
+        variableWidth: true,
+        slidesToShow: 1, // Количество отображаемых слайдов за раз
+          slidesToScroll: 1,
+        adaptiveHeight: true,
+    });
+    })
+
+
+
+
+window.addEventListener("load", () => {
+  document.querySelectorAll(".career_item").forEach(item => {
+    console.log(item)
+    console.log(sectionWidth.clientWidth)
+    console.log(item.width)
+    item.style.width = sectionWidth.clientWidth + "px";
+  })
+  
 })
 
 
@@ -132,7 +153,6 @@ function buttonLogic(container) {
       },10)
       element.style.transform = "rotateZ(45deg)";
     } else {
-      console.log(12);
       nextElem.style.height = "0px";
       element.style.transform = "rotateZ(0deg)";
       setTimeout(() => {
@@ -194,7 +214,6 @@ jobButtons.forEach(button => {
         marker.querySelector(".offers").nextElementSibling.insertAdjacentHTML("beforeend",  `<li>${offer}</li>`)
           })
         
-          console.log(careerObject[button.textContent]);
         
       if((careerObject[`${button.textContent}`].indexOf(element) ===  (careerObject[`${button.textContent}`].length - 1))) {
         buttonLogic(document.querySelector(".jobs_container").querySelectorAll(".plus_button"));
@@ -227,7 +246,6 @@ contactButtons.forEach(contactButon => {
       document.querySelector(".map_container").insertAdjacentHTML("beforeend",`<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Af4a1068ef282b3f77eadb943a8f1bd6b829d7c4c46ba01fe360565042f3e7277&amp;source=constructor" width="100%" height="224" frameborder="0"></iframe>`)
     } else {
       let mobile =document.querySelector(".mobile").nextElementSibling;
-      console.log(mobile)
       let email =document.querySelector(".mail").nextElementSibling;
       let map = document.querySelector(".map").nextElementSibling;
       
@@ -246,7 +264,7 @@ contactButtons.forEach(contactButon => {
 })
 })
 
-console.log(productButtons)
+
 productButtons.forEach(productItem => {
   productItem.addEventListener('click', () => {
     document.querySelector(".products_container").querySelector(".button_checked").classList.toggle("button_checked");

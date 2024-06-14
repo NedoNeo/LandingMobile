@@ -18,8 +18,8 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          // MiniCssExtractPlugin.loader,
-          'style-loader',
+          MiniCssExtractPlugin.loader,
+          // 'style-loader',
           'css-loader',
           {
             loader: 'postcss-loader',
@@ -39,9 +39,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './index.html',
     }),
-    // new MiniCssExtractPlugin({
-    //   filename: 'newStyle.css',
-    // }),
+    new MiniCssExtractPlugin({
+      filename: 'newStyle.css',
+    }),
   ],
   mode: 'development', // Или 'production' в зависимости от ваших нужд
 };
