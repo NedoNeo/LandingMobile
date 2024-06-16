@@ -92,8 +92,6 @@ window.addEventListener("load", () => {
 
 buttons.forEach((element) => {
   element.addEventListener('click', () => {
-    
-      formWrapper.classList.toggle("hidden_class")
       formWrapper.style.top = "0";
    
     
