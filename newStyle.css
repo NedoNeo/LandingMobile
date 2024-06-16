@@ -1340,6 +1340,8 @@ body {
 
 .career_slider .slick-arrow {
     top: 17% ;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
  .slick-arrow.slick-prev {
