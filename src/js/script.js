@@ -227,7 +227,7 @@ contactButtons.forEach(contactButon => {
       mobile.href = `tel:8 (812) 602-77-60`;
       email.textContent = "info@pplk.ru";
       email.href = `mailto:info@pplk.ru`;
-      map.textContent = "ул. Заозёрная, д. 8 к. 2, офис 202</br>(7 мин. пешком от метро Фрунзенская)";
+      map.textContent = "ул. Заозёрная, д. 8 к. 2, офис 202<br>(7 мин. пешком от метро Фрунзенская)";
       map.href = `https://yandex.com.ge/maps/2/saint-petersburg/house/zaozyornaya_ulitsa_8k2/Z0kYdQVkTkwAQFtjfXVxdnhkbA==/?ll=30.324647%2C59.907575&z=18.04`
 
       document.querySelector(".map_container").lastElementChild.remove();
