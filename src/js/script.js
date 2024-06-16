@@ -92,13 +92,17 @@ window.addEventListener("load", () => {
 
 buttons.forEach((element) => {
   element.addEventListener('click', () => {
-    formWrapper.style.top = "0";
+    
+      formWrapper.classList.toggle("hidden_class")
+      formWrapper.style.top = "0";
+   
+    
   })
 })
 
 exitButton.forEach((element) => {
   element.addEventListener('click', () => {
-    formWrapper.style.top = "-100%";
+    formWrapper.style.top = "-200%";
 
     if(buttons[1].classList.contains("hidden_class")) {
     setTimeout(() => {
