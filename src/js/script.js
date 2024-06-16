@@ -52,17 +52,6 @@ let careerObject ={
   "отдел продаж": false,
   "внештатный сотрудник": false
 }
-
-
-
-  // $(document).ready(() => {
-  //   document.querySelectorAll(".career_item").forEach(item => {
-  //     console.log(item)
-  //     console.log(sectionWidth.clientWidth)
-  //     console.log(item.width)
-  //     item.style.width = sectionWidth.clientWidth + "px";
-  //   })
-  // })
   
 
 
@@ -93,9 +82,6 @@ let careerObject ={
 
 window.addEventListener("load", () => {
   document.querySelectorAll(".career_item").forEach(item => {
-    console.log(item)
-    console.log(sectionWidth.clientWidth)
-    console.log(item.width)
     item.style.width = sectionWidth.clientWidth + "px";
   })
   
@@ -106,7 +92,7 @@ window.addEventListener("load", () => {
 
 buttons.forEach((element) => {
   element.addEventListener('click', () => {
-    formWrapper.style.top = "50px";
+    formWrapper.style.top = "0";
   })
 })
 
